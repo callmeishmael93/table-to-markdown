@@ -16,7 +16,7 @@
 		.map(e => e.split("\t"));
 
 	let header_line = splited_texts[0].reduce((acc, e) => acc + " --- |", "|");
-	let header = splited_texts[0].reduce((acc, e) => acc + e + " | ", "| ") 	+ "\n" + header_line;
+	let header = splited_texts[0].reduce((acc, e) => acc + e + " | ", "| ") + "\n" + header_line;
 	let table_expression = splited_texts.slice(1)
 		.reduce((acc, e) => acc + e.reduce((acc, e2) => acc + e2 + " | ", "| ") + "\n", "");
 
